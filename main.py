@@ -19,3 +19,10 @@ async def test_function(Auth: str = Header(...), Secret: str = Header(None)):
         return {'test': 'maks'}
     else:
         return {'test': 'unknown!'}
+
+
+@app.get('/get-events')
+async def get_events():
+   return {'test': [
+       'test', 'maks', 'test1'
+   ]}
